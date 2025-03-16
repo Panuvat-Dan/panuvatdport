@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="overlay"></div>
+        <div class="container text-center">
+            <h1>WELCOME TO MY PORTFOLIO </h1>
+            <h2>PANUVAT DANVORAPONG</h2>
+            <p>Passionate about Data Engineering & Data Analytic</p>
+            <a href="#about" class="btn btn-primary">Learn Me More </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="container mt-5">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <p><strong><i class="fas fa-user"></i>Full Name:</strong> {{ about_me.name }}</p>
+        <p><strong><i class="fas fa-graduation-cap"></i> Master's Degree:</strong> {{ about_me.master_degree }}</p>
+        <p><strong><i class="fas fa-university"></i> Bachelor's Degree:</strong> {{ about_me.bachelor_degree }}</p>
+        <p><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> <a href="{{ about_me.linkedin }}" target="_blank">{{ about_me.linkedin }}</a></p>
+        <p><strong><i class="fas fa-globe"></i> Website:</strong> <a href="{{ about_me.website }}" target="_blank">{{ about_me.website }}</a></p>
+        <p><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="{{ about_me.github }}" target="_blank">{{ about_me.github }}</a></p>
+        <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:{{ about_me.email }}">{{ about_me.email }}</a></p>
+        <p><strong><i class="fas fa-phone"></i> Phone:</strong> <a href="tel:{{ about_me.phone }}">{{ about_me.phone }}</a></p>
+    </section>
+    
+
+    <!-- Job Experience Section -->
+    <section id="experience" class="container mt-5">
+        <h2><i class="fas fa-briefcase"></i> Job Experience</h2>
+        {% for job in jobs %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ job.title }}</h5>
+                <p class="card-text">{{ job.company }} ({{ job.duration }})</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- Capstone Projects Section -->
+    <section id="projects" class="container mt-5">
+        <h2><i class="fas fa-project-diagram"></i> Capstone Projects</h2>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.name }}</h5>
+                        <p class="card-text">{{ project.description }}</p>
+                        <a href="{{ project.repo }}" class="btn btn-outline-primary" target="_blank">GitHub Repo</a>
+                        <a href="{{ project.website }}" class="btn btn-outline-primary" target="_blank">Website</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container mt-5">
+        <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <ul class="list-group">
+            {% for cert in certifications %}
+            <li class="list-group-item">
+                <i class="fas fa-award"></i> 
+                <a href="{{ cert.link }}" target="_blank">{{ cert.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
