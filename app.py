@@ -48,4 +48,4 @@ def home():
     return render_template("index.html", jobs=job_experiences, projects=capstone_projects, certifications=certifications, about_me=about_me)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
