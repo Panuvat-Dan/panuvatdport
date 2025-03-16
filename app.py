@@ -40,7 +40,7 @@ def home():
         "master_degree": "Master of Science - MS, Information Technology, King Mongkut's University of Technology Thonburi (2021 - 2023)",
         "bachelor_degree": "Bachelor of Engineering - Aerospace Engineering (IDDP Program), Royal Melbourne Insitude University - Kasetsart University (2014-2018)",
         "linkedin": "https://www.linkedin.com/in/panuvat-danvorapong/",
-        "website": "https://yourportfolio.com",
+        "website": "https://panuvatdport.onrender.com/",
         "github": "https://github.com/Panuvat-Dan",
         "email": "dpanuvatz2m1994@gmail.com",
         "phone": "+66-957390898"
