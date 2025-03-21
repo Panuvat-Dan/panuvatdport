@@ -7,11 +7,11 @@ app = Flask(__name__)
 def home():
     job_experiences = [
         {"title": "Senior Technical Consultant (Contractor)", "company": "Celebal Technologies", "duration": "Oct 2024 - Present"},
-        {"title": "Senior ETL Developer (Contractor)", "company": "Generali life insurance", "duration": "Apr 2024 - Present"},
-        {"title": "Senior Data Engineer (Contractor)", "company": "R-system Consultant", "duration": "Sep 2023 - Mar 2024"},
-        {"title": "Data Engineer consultant (Contractor)", "company": "Adastra Thailand", "duration": "Aug 2022- Jun 2023"},
-        {"title": "Data Engineer (Contractor)", "company": "Lotus's CP AXTRA", "duration": "Aug 2021 - Jul 2022"},
-        {"title": "Project Engineer (Full Time)", "company": "Toyota Motor Thailand", "duration": "Jul 2019 - Jul 2021"}
+        {"title": "Senior ETL Developer (Contractor)", "company": "Generali life insurance", "duration": "July 2023 - Present"},
+        {"title": "Data Engineer (Contractor)", "company": "R-system Consultant", "duration": "May 2023 - Oct 2024"},
+        {"title": "Data Engineer consultant (Contractor)", "company": "Adastra Thailand", "duration": "July 2022- Jun 2023"},
+        {"title": "Data Engineer (Contractor)", "company": "Lotus's CP AXTRA", "duration": "Sep 2021 - July 2022"},
+        {"title": "Project Engineer (Full Time)", "company": "Toyota Motor Thailand", "duration": "July 2019 - Oct 2021"}
     ]
 
     capstone_projects = [
